@@ -1,11 +1,11 @@
 import HomePage from "./routes/Homepage/HomePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ListPage from "./routes/listPage/ListPage";
+import ListPage from "./routes/ListPage/ListPage";
 import Layout from "./routes/Layout/Layout";
-//import SinglePage from "./routes/singlePage/singlePage";
-//import ProfilePage from "./routes/profilePage/profilePage";
-//import Login from "./routes/login/login";
-//import Register from "./routes/register/register";
+import SinglePage from "./routes/SinglePage/SinglePage";
+import ProfilePage from "./routes/ProfilePage/ProfilePage";
+import Login from "./routes/Login/Login";
+import Register from "./routes/Register/Register";
 
 function App() {
   const router = createBrowserRouter([
@@ -21,22 +21,22 @@ function App() {
           path: "/list",
           element: <ListPage />,
         },
-        // {
-        //   path: "/:id",
-        //   element: <SinglePage />,
-        // },
-        // {
-        //   path: "/profile",
-        //   element: <ProfilePage />,
-        // },
-        // {
-        //   path: "/login",
-        //   element: <Login />,
-        // },
-        // {
-        //   path: "/register",
-        //   element: <Register />,
-        // },
+        {
+          path: "/:id",
+          element: <SinglePage />,
+        },
+        {
+          path: "/profile",
+          element: <ProfilePage />,
+        },
+        {
+          path: "/login",
+          element: <Login />,
+        },
+        {
+          path: "/register",
+          element: <Register />,
+        },
       ],
     },
   ]);
